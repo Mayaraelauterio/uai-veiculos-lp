@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="./img/v2/cena-hero-800.avif" type="image/avif" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="./img/v2/cena-hero-1200.avif" type="image/avif" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="./fonts/outfit-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/inter-var.woff2" crossorigin>
+<title>Do zero à sua primeira catira: R$5 a R$10 mil de lucro comprando e vendendo carros. — UAI Veículos</title>
+<meta name="description" content="Em 2 dias presenciais, o Pastor da UAI te mostra como encontrar, avaliar e revender carro com margem, direto do celular.">
+<meta name="theme-color" content="#0a0806">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="./icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="./icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Do zero à sua primeira catira: R$5 a R$10 mil de lucro comprando e vendendo carros.">
+<meta property="og:description" content="Em 2 dias presenciais, o Pastor da UAI te mostra como encontrar, avaliar e revender carro com margem, direto do celular.">
+<style>/* Fontes self-hosted, subset apenas com os caracteres que a pagina usa.
+   43KB no total contra 394KB do Google Fonts, sem DNS/TLS externo e sem CSS bloqueante. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(./fonts/inter-var.woff2) format('woff2-variations')}
+
+@font-face{font-family:Outfit;font-style:normal;font-weight:400 700;font-display:swap;src:url(./fonts/outfit-var.woff2) format('woff2-variations')}
+
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;
+  src:url(./fonts/playfair-700.woff2) format('woff2')}
+
+:root{
+  --bg:#0a0806; --surface:#141009; --surface-2:#1b150c;
+  --ink:#f5efe2; --muted:#b8ab92;
+  --border:rgba(212,165,58,.12); --border-strong:rgba(212,165,58,.22);
+  --gold-100:#f6dc9a; --gold-300:#f2c569; --gold-500:#d4a53a; --gold-700:#9a7526;
+  --serif:"Playfair Display",Georgia,serif;
+  --display:Outfit,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --radius:18px;
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html:not(.js) .reveal{opacity:1;transform:none}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.5;
+}
+img,svg{max-width:100%;display:block}
+/* <picture> vira transparente no layout: as regras de posicionamento
+   continuam valendo pro <img> filho, sem wrapper extra atrapalhando */
+picture{display:contents}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+@media (max-width:720px){section{padding:48px 0}}
+
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.01em;margin:0 0 .5em}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+.muted{color:var(--muted)}
+
+.ouro{
+  background:linear-gradient(180deg,#f6dc9a 0%,#d4a53a 55%,#a87e28 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+em.ouro{font-style:normal}
+
+.filete{width:64px;height:2px;background:linear-gradient(90deg,var(--gold-500),transparent);margin:20px 0 0}
+.filete.centro{margin:20px auto 0}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--gold-300);
+  background:rgba(212,165,58,.09);border:1px solid var(--border-strong);
+  padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+
+.marquee{font-family:var(--display)}
+
+/* ---------- botao ouro metalico ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:18px 32px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:16px;
+  background:linear-gradient(180deg,#f0c565,#c9992f);color:#1b1305;
+  border:0;cursor:pointer;min-height:56px;
+  box-shadow:0 8px 28px -10px rgba(212,165,58,.6), inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px -10px rgba(212,165,58,.75), inset 0 1px 0 rgba(255,255,255,.4)}
+.btn:active{transform:translateY(0)}
+.btn-block{width:100%}
+.microcopy{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* ---------- header ---------- */
+.header{
+  position:absolute;top:0;left:0;right:0;z-index:50;height:64px;
+  background:transparent;
+}
+.header-inner{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo-link{display:flex;align-items:center}
+.logo{height:52px;width:auto;object-fit:contain;mix-blend-mode:screen;filter:saturate(1.15) contrast(1.06)}
+@media (max-width:720px){.logo{height:42px}}
+.header .btn{min-height:40px;padding:0 22px;font-size:14px}
+@media (max-width:720px){
+  .header{height:56px}
+  .header-inner{justify-content:center}
+  .header .btn{display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;min-height:92vh;display:flex;align-items:center;padding:0;background:var(--bg)}
+.hero-img{position:absolute;top:0;right:0;bottom:0;left:auto;width:58%;height:100%;object-fit:cover;object-position:right center}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0a0806 0%,rgba(10,8,6,.9) 40%,rgba(10,8,6,.35) 66%,rgba(10,8,6,.15) 100%)}
+/* halo quente atras do Pastor: faz a figura nascer do fundo em vez de flutuar recortada */
+.hero-halo{
+  position:absolute;right:0;bottom:0;width:58%;height:96%;z-index:0;pointer-events:none;
+  background:radial-gradient(46% 52% at 62% 62%, rgba(212,165,58,.16), rgba(212,165,58,.05) 45%, transparent 72%);
+}
+.hero-pastor{
+  position:absolute;right:1vw;bottom:0;height:94%;width:auto;z-index:1;
+  object-fit:contain;object-position:bottom right;
+  filter:drop-shadow(0 30px 70px rgba(0,0,0,.8)) drop-shadow(-18px 0 50px rgba(212,165,58,.14));
+  /* fade em duas direcoes: dissolve na base e na borda direita, sem corte seco */
+  -webkit-mask-image:linear-gradient(180deg,#000 46%,rgba(0,0,0,.55) 78%,transparent 100%),
+                     linear-gradient(270deg,#000 72%,rgba(0,0,0,.5) 90%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(180deg,#000 46%,rgba(0,0,0,.55) 78%,transparent 100%),
+             linear-gradient(270deg,#000 72%,rgba(0,0,0,.5) 90%,transparent 100%);
+  mask-composite:intersect;
+  pointer-events:none;
+}
+@media (max-width:1200px){.hero-pastor{right:-2vw;height:82%}.hero-halo{width:66%}}
+.hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:18vh 20px 96px;width:100%}
+.hero-text{max-width:640px}
+.hero .atrib{font-size:14px;color:var(--gold-300);margin:0 0 14px;font-weight:600}
+.hero h1{font-size:clamp(42px,5.4vw,76px);line-height:1.06;letter-spacing:-.02em;margin-bottom:20px}
+.hero h1 em{font-style:normal;background:linear-gradient(180deg,#f6dc9a 0%,#d4a53a 55%,#a87e28 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(17px,1.7vw,20px);color:var(--muted);max-width:520px;margin:0 0 18px}
+.hero .escassez{font-size:14px;color:var(--gold-300);margin:0 0 26px}
+.trust-line{display:flex;align-items:center;gap:8px;margin-top:22px;font-size:14px;color:var(--muted)}
+.trust-line svg{width:16px;height:16px;color:var(--gold-500);flex:none}
+@media (max-width:900px){
+  .hero{--header-h:64px;min-height:auto;display:block;padding-top:var(--header-h)}
+  .hero-img{position:relative;top:auto;right:auto;bottom:auto;left:auto;width:100%;height:34vh;object-position:center 25%}
+  /* mobile: o Pastor divide a faixa com a cena, entao precisa dissolver na
+     esquerda (onde encontra o carro), na base e na borda direita da tela */
+  .hero-pastor{
+    height:34vh;right:0;bottom:auto;top:var(--header-h);opacity:1;
+    -webkit-mask-image:linear-gradient(180deg,#000 58%,rgba(0,0,0,.5) 86%,transparent 100%),
+                       linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 14%,#000 34%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(180deg,#000 58%,rgba(0,0,0,.5) 86%,transparent 100%),
+               linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 14%,#000 34%);
+    mask-composite:intersect;
+  }
+  .hero-halo{width:80%;height:34vh;top:var(--header-h);bottom:auto}
+  .hero-shade{background:linear-gradient(0deg,#0a0806 0%,rgba(10,8,6,.35) 45%,transparent)}
+  .hero-inner{padding:34px 20px 56px}
+  .hero h1{font-size:clamp(27px,7.4vw,42px);line-height:1.15}
+  .hide-mobile{display:none}
+}
+@media (max-width:720px){.hero{--header-h:56px}}
+
+/* ---------- secoes: cabecalho padrao ---------- */
+.section-head{text-align:center;max-width:680px;margin:0 auto 52px}
+.section-head h2{font-size:clamp(32px,4.2vw,54px)}
+.section-head p{font-size:17px}
+
+/* ---------- problema: editorial numerado ---------- */
+.problema-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.problema-esq{position:sticky;top:120px}
+.problema-esq h2{font-size:clamp(32px,4.2vw,54px);text-align:left}
+.problema-esq p{font-size:17px}
+.problema-item{display:flex;gap:28px;padding:36px 0;border-bottom:1px solid var(--border)}
+.problema-item:first-child{padding-top:0}
+.problema-num{font-family:var(--serif);font-style:italic;font-size:clamp(40px,4vw,60px);line-height:1;opacity:.85;flex:none;
+  background:linear-gradient(180deg,#f6dc9a,#a87e28);-webkit-background-clip:text;background-clip:text;color:transparent}
+.problema-item h3{font-size:17px;font-weight:600;margin-bottom:8px;letter-spacing:0}
+.problema-item p{font-size:15px;color:var(--muted);margin:0}
+.problema-glow{position:absolute;top:0;right:0;width:50%;height:60%;pointer-events:none;
+  background:radial-gradient(60% 60% at 80% 20%, rgba(212,165,58,.06), transparent 70%)}
+@media (max-width:860px){
+  .problema-grid{grid-template-columns:1fr;gap:24px}
+  .problema-esq{position:static}
+  .problema-num{font-size:38px}
+}
+
+/* ---------- autoridade ---------- */
+.authority{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.authority-foto{position:relative}
+.authority-foto{
+  background:radial-gradient(60% 55% at 50% 30%, rgba(212,165,58,.14), transparent 70%);
+}
+.authority-foto img{
+  width:100%;max-height:660px;object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 20px 50px rgba(0,0,0,.7));
+  -webkit-mask-image:linear-gradient(180deg,#000 42%,rgba(0,0,0,.6) 76%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 42%,rgba(0,0,0,.6) 76%,transparent 100%);
+}
+.authority-legenda{margin-top:18px}
+.authority-legenda .nome{font-family:var(--serif);font-size:22px;color:var(--ink)}
+.authority-legenda .cargo{font-size:12px;color:var(--gold-500);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+.authority-texto h3{font-size:clamp(28px,3vw,40px)}
+.timeline{margin:28px 0;padding:0;list-style:none;position:relative}
+.timeline::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:rgba(212,165,58,.2)}
+.timeline li{position:relative;padding:0 0 26px 32px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:'';position:absolute;left:0;top:6px;width:11px;height:11px;border-radius:50%;
+  background:linear-gradient(180deg,#f2c569,#c9992f);box-shadow:0 0 10px rgba(212,165,58,.5)}
+.timeline .ato{font-weight:600;font-size:16px;margin-bottom:4px}
+.timeline p{font-size:15px;color:var(--muted);margin:0}
+@media (max-width:860px){.authority{grid-template-columns:1fr;gap:32px}}
+
+/* ---------- agenda: sobre a foto do evento ---------- */
+.agenda{position:relative;overflow:hidden;min-height:680px;padding:88px 0}
+.agenda-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.agenda-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,6,4,.94) 0%,rgba(8,6,4,.9) 50%,rgba(8,6,4,.84) 100%)}
+.agenda-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.agenda-conteudo{max-width:760px;margin:0 auto;text-align:center}
+.agenda h2{font-size:clamp(32px,4.2vw,54px)}
+.agenda .sub{font-size:17px;color:var(--muted);margin-bottom:36px}
+.dias{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px;text-align:left}
+.dia .chip{
+  display:inline-block;font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-300);border:1px solid var(--border-strong);border-radius:999px;padding:5px 14px;margin-bottom:14px;
+}
+.agenda-item{background:rgba(10,8,6,.55);border:1px solid rgba(212,165,58,.15);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.agenda-item .t{font-weight:600;font-size:15px;margin-bottom:4px}
+.agenda-item p{font-size:13px;color:rgba(245,239,226,.75);margin:0}
+@media (max-width:900px){
+  .agenda{min-height:0;padding:0 0 56px}
+  .agenda-img{position:relative;height:40vh}
+  .agenda-shade{background:linear-gradient(0deg,#0a0806 20%,transparent 70%)}
+  .agenda-inner{margin-top:-40px}
+  .agenda-conteudo{max-width:100%}
+  .dias{grid-template-columns:1fr}
+}
+
+/* ---------- accordion objecoes+faq ---------- */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:0}
+.faq-item summary{
+  cursor:pointer;font-weight:600;font-size:16px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:22px 0;min-height:44px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:22px;color:var(--gold-500);transition:transform .2s ease;flex:none}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .resposta{color:var(--muted);margin:0 0 20px;font-size:15px;display:flex;gap:10px}
+.faq-item .resposta svg{flex:none;width:18px;height:18px;color:var(--gold-500);margin-top:2px}
+.riscado{text-decoration:line-through;text-decoration-color:var(--gold-500);text-decoration-thickness:2px}
+
+/* ---------- cta final ---------- */
+.cta-final{position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;padding:88px 0}
+.cta-final-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center}
+.cta-final-shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,8,6,.55),#0a0806 78%)}
+.cta-final-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 20px;width:100%;text-align:center}
+.cta-final h2{font-size:clamp(36px,5vw,64px)}
+.cta-final .sub{font-size:17px;color:var(--muted);margin:0 auto 8px;max-width:520px}
+.cta-final .escassez{font-size:14px;color:var(--gold-300);margin-bottom:34px}
+@media (max-width:720px){.cta-final{min-height:0}.cta-final-shade{background:radial-gradient(ellipse at center,rgba(10,8,6,.92),#0a0806 85%)}}
+
+/* ---------- form card ---------- */
+.form-card{
+  background:linear-gradient(180deg,rgba(212,165,58,.05),transparent 40%),rgba(20,16,9,.9);
+  border:1px solid var(--border-strong);border-radius:20px;padding:30px;
+  max-width:460px;margin:0 auto;position:relative;text-align:left;
+  box-shadow:0 20px 60px -20px rgba(0,0,0,.6);
+}
+.form-card h3{font-size:20px;font-weight:600;text-align:center;margin-bottom:6px;letter-spacing:0}
+.form-card .sub{text-align:center;color:var(--muted);font-size:14px;margin:0 0 22px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.field input[type=text],
+.field input[type=tel],
+.field input[type=email]{
+  width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--border-strong);
+  background:var(--bg);color:var(--ink);font-size:16px;line-height:1.3;
+  font-family:inherit;-webkit-appearance:none;appearance:none;
+  transition:border-color .15s ease;
+}
+.field input::placeholder{color:rgba(184,171,146,.55)}
+.field input:focus{outline:none;border-color:var(--gold-500)}
+/* autofill do Chrome nao pode voltar o fundo branco */
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus{
+  -webkit-text-fill-color:var(--ink);
+  -webkit-box-shadow:0 0 0 1000px var(--bg) inset;
+  caret-color:var(--ink);
+}
+.field .erro{color:#ff9d7a;font-size:13px;margin-top:6px;display:none}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:16px 0;font-size:13px;color:var(--muted)}
+.consent input{margin-top:3px;accent-color:var(--gold-500)}
+.hp{position:absolute;left:-9999px;opacity:0}
+.form-msg{margin-top:14px;font-size:14px;text-align:center;min-height:18px}
+.form-msg.ok{color:#9fd8a2}
+.form-msg.err{color:#ff9d7a}
+
+/* ---------- modal / bottom-sheet ---------- */
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(6,4,2,.8);z-index:100;
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.modal-backdrop.open{display:flex}
+.modal-backdrop .form-card{max-height:90vh;overflow-y:auto;width:100%;background:var(--surface-2)}
+.modal-close{
+  position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);font-size:18px;
+}
+.modal-close:hover{color:var(--ink);border-color:var(--gold-500)}
+.sheet-handle{display:none}
+@media (max-width:720px){
+  .modal-backdrop{align-items:flex-end;padding:0}
+  .modal-backdrop .form-card{max-height:85dvh;border-radius:20px 20px 0 0;max-width:none}
+  .sheet-handle{display:block;width:36px;height:4px;border-radius:2px;background:var(--border-strong);margin:0 auto 16px}
+}
+
+/* ---------- sticky mobile ---------- */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(10,8,6,.95);border-top:1px solid var(--border-strong);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  display:none;text-align:center;
+}
+.sticky-cta .microcopy{font-size:11px;margin-top:6px}
+@media (max-width:720px){.sticky-cta{display:block}}
+
+/* ---------- footer ---------- */
+footer{padding:48px 20px;border-top:1px solid var(--border);background:#070503;text-align:center}
+footer .linha1{display:flex;gap:18px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+footer .linha1 a{color:var(--gold-300);font-size:13px}
+footer .linha1 a:hover{text-decoration:underline}
+footer .linha2{font-size:12px;color:var(--muted)}
+footer .disclaimer{font-size:11px;color:rgba(184,171,146,.75);margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- pagina obrigado ---------- */
+.obrigado{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:80px 20px;
+  background:radial-gradient(60% 50% at 50% 20%, rgba(212,165,58,.08), transparent 60%),var(--bg)}
+.obrigado-card{max-width:560px;text-align:center}
+.obrigado-card .check{width:48px;height:48px;margin:0 auto 24px;color:var(--gold-500)}
+.obrigado-card h1{font-size:clamp(30px,4vw,44px)}
+.obrigado-card p{color:var(--muted);font-size:16px}
+
+
+/* ---------- telefone com seletor de pais ---------- */
+.tel-wrap{position:relative;display:flex;gap:8px;align-items:stretch}
+.pais-btn{
+  display:flex;align-items:center;gap:6px;flex:none;
+  padding:0 12px;border-radius:12px;cursor:pointer;
+  background:var(--surface-2);border:1px solid var(--border-strong);color:var(--ink);
+  font-size:14px;font-family:inherit;min-height:52px;
+}
+.pais-btn:hover{border-color:var(--gold-500)}
+.pais-btn .bandeira{font-size:20px;line-height:1}
+.pais-btn .ddi{font-weight:600;font-size:14px}
+.pais-btn svg{color:var(--muted)}
+.tel-wrap input[type=tel]{flex:1;min-width:0}
+.pais-lista{
+  position:absolute;top:calc(100% + 6px);left:0;z-index:10;
+  width:260px;max-height:240px;overflow-y:auto;
+  background:var(--surface-2);border:1px solid var(--border-strong);border-radius:12px;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.8);padding:6px;
+}
+.pais-lista[hidden]{display:none}
+.pais-opt{
+  display:flex;align-items:center;gap:10px;width:100%;
+  padding:10px 12px;border:0;border-radius:8px;cursor:pointer;
+  background:transparent;color:var(--ink);font-size:14px;font-family:inherit;text-align:left;
+}
+.pais-opt:hover{background:rgba(212,165,58,.1)}
+.pais-opt .bandeira{font-size:18px}
+.pais-opt .nome{flex:1}
+.pais-opt .ddi{color:var(--muted);font-size:13px}
+
+
+/* ---------- pastor no CTA final ---------- */
+.cta-final{overflow:hidden}
+.cta-final-pastor{
+  position:absolute;left:1vw;bottom:0;height:78%;width:auto;z-index:1;
+  object-fit:contain;object-position:bottom left;
+  filter:drop-shadow(0 24px 60px rgba(0,0,0,.8));
+  -webkit-mask-image:linear-gradient(180deg,#000 44%,rgba(0,0,0,.55) 78%,transparent 100%),
+                     linear-gradient(90deg,#000 72%,rgba(0,0,0,.5) 90%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(180deg,#000 44%,rgba(0,0,0,.55) 78%,transparent 100%),
+             linear-gradient(90deg,#000 72%,rgba(0,0,0,.5) 90%,transparent 100%);
+  mask-composite:intersect;
+  pointer-events:none;
+}
+.cta-final-halo{
+  position:absolute;left:0;bottom:0;width:46%;height:88%;z-index:0;pointer-events:none;
+  background:radial-gradient(44% 50% at 38% 62%, rgba(212,165,58,.14), rgba(212,165,58,.04) 45%, transparent 72%);
+}
+@media (max-width:1200px){.cta-final-pastor,.cta-final-halo{display:none}}
+
+
+/* ==========================================================================
+   Passe mobile-first: alvos de toque, legibilidade e custo de layout.
+   Alturas do contain-intrinsic-size medidas em 390x844 real (nao chutadas):
+   a palavra-chave auto faz o browser substituir a estimativa pela altura
+   verdadeira depois do primeiro render, entao o desktop nao herda o numero
+   do mobile.
+   ========================================================================== */
+
+/* Pular layout e paint das secoes longe da viewport. Sozinhas elas somam
+   ~7,9 mil px que o primeiro paint nao precisa calcular. */
+#problema   {content-visibility:auto;contain-intrinsic-size:auto 1135px}
+#autoridade {content-visibility:auto;contain-intrinsic-size:auto 1329px}
+#evento     {content-visibility:auto;contain-intrinsic-size:auto 1950px}
+#faq        {content-visibility:auto;contain-intrinsic-size:auto 1365px}
+
+/* Checkbox de 13px e menor que a ponta do dedo. O label ja e clicavel
+   inteiro, mas o alvo visual precisa ser mirable. */
+.consent{min-height:44px;align-items:center;cursor:pointer}
+.consent input{width:20px;height:20px;flex:0 0 20px;margin-top:0}
+
+/* Links do rodape tinham 20px de altura: passam a ter area de 44px sem
+   mudar o espacamento visual entre eles. */
+footer .linha1{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px}
+footer .linha1 a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+
+@media (max-width:720px){
+  /* Corpo de texto que se le de verdade sobe para 15px: 13px em tela de
+     390px cansa e derruba conversao. */
+  .agenda-item p,
+  .consent,
+  .field label,
+  .entrega-card p,
+  .faq-item p{font-size:15px;line-height:1.55}
+
+  .microcopy{font-size:13px}
+  .authority-legenda .cargo{font-size:13px}
+  footer .linha1 a{font-size:14px}
+
+  /* 42px estava 2px abaixo do minimo de alvo de toque. */
+  .logo{height:44px}
+  .logo-link{min-height:44px}
+
+  /* Todo botao e campo com altura de dedo. */
+  .btn,.header .btn{min-height:48px}
+  .field input,.field select{min-height:48px;font-size:16px}
+}
+
+/* A barra fixa de 81px flutua fora do fluxo: sem reservar o espaco ela
+   soterrava o disclaimer legal no fim da rolagem. O espaco fica sempre
+   reservado (mesmo com a barra oculta) para o CLS continuar zero. */
+@media (max-width:720px){
+  body{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+  /* Entra so depois que o CTA do hero sai de vista: evita dois botoes
+     identicos na mesma tela e devolve altura util no primeiro scroll.
+     Anima transform, nunca display, para nao empurrar layout. */
+  .sticky-cta{
+    display:block;
+    transform:translateY(110%);
+    transition:transform .22s ease;
+    will-change:transform;
+  }
+  .sticky-cta.visivel{transform:translateY(0)}
+}
+@media (max-width:720px) and (prefers-reduced-motion:reduce){
+  .sticky-cta{transition:none}
+}
+
+/* A foto de autoridade ocupava 660px: 78% da tela so de imagem antes de
+   qualquer argumento. No desktop ela convive ao lado do texto e continua
+   inteira; o limite vale so onde a altura e escassa. */
+@media (max-width:720px){
+  .authority-foto img{max-height:440px}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo-link" aria-label="UAI Veículos"><picture>
+      <source type="image/avif" srcset="./img/v2/logo-uai-160.avif 160w, ./img/v2/logo-uai-200.avif 200w, ./img/v2/logo-uai-320.avif 320w" sizes="(max-width:720px) 94px, 112px">
+      <source type="image/webp" srcset="./img/v2/logo-uai-160.webp 160w, ./img/v2/logo-uai-200.webp 200w, ./img/v2/logo-uai-320.webp 320w" sizes="(max-width:720px) 94px, 112px">
+      <img class="logo" src="./img/v2/logo-uai-160.webp" alt="UAI Veículos" width="150" height="70" fetchpriority="high" decoding="async">
+    </picture></a>
+    <a href="#" class="btn" data-cta="header" onclick="abrirModal();return false;">Garantir minha vaga</a>
+  </div>
+</header>
+
+<!-- HERO: cena de abertura. INTERINO: cena do carro sem tag de nome ate a foto oficial do Pastor chegar. -->
+<section class="hero">
+  <picture>
+    <source type="image/avif" srcset="./img/v2/cena-hero-640.avif 640w, ./img/v2/cena-hero-800.avif 800w, ./img/v2/cena-hero-1200.avif 1200w, ./img/v2/cena-hero-1672.avif 1672w" sizes="(max-width: 900px) 100vw, 44vw">
+    <source type="image/webp" srcset="./img/v2/cena-hero-640.webp 640w, ./img/v2/cena-hero-800.webp 800w, ./img/v2/cena-hero-1200.webp 1200w, ./img/v2/cena-hero-1672.webp 1672w" sizes="(max-width: 900px) 100vw, 44vw">
+    <img src="./img/v2/cena-hero-640.webp" alt="" class="hero-img"
+      width="1672" height="941"
+      fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-shade"></div>
+  <div class="hero-halo"></div>
+  <picture>
+    <source type="image/avif" srcset="./img/v2/pastor-hero-420.avif 420w, ./img/v2/pastor-hero-560.avif 560w, ./img/v2/pastor-hero-933.avif 933w" sizes="(max-width: 900px) 53vw, 30vw">
+    <source type="image/webp" srcset="./img/v2/pastor-hero-420.webp 420w, ./img/v2/pastor-hero-560.webp 560w, ./img/v2/pastor-hero-933.webp 933w" sizes="(max-width: 900px) 53vw, 30vw">
+    <img src="./img/v2/pastor-hero-420.webp" alt="Pastor Evandro, da UAI Veículos" class="hero-pastor"
+      width="933" height="1273"
+      fetchpriority="high" decoding="async">
+  </picture>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">Evento presencial · 2 dias<span class="hide-mobile"> · Para quem nunca negociou carro</span></span>
+      <h1>Do zero à sua primeira catira: <em>R$5 </em>a <em>R$10 mil</em> de lucro comprando e vendendo carros.</h1>
+      <p class="sub">Em 2 dias presenciais, o Pastor da UAI te mostra como encontrar, avaliar e revender carro com margem, direto do celular.</p>
+      <a href="#" class="btn" data-cta="hero" onclick="abrirModal();return false;">Quero garantir minha vaga</a>
+      <div class="microcopy">Leva 20 segundos. Você recebe os detalhes no WhatsApp.</div>
+      <div class="trust-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sem experiência no ramo. O primeiro lucro sai de um carro só.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DE PROVA EM NUMEROS: BLOQUEADA ate a equipe fornecer numeros reais (nunca inventar). -->
+
+<section id="problema" style="position:relative">
+  <div class="problema-glow"></div>
+  <div class="wrap">
+    <div class="problema-grid">
+      <div class="problema-esq">
+        <h2>Você vê gente ganhando dinheiro com carro. E não sabe por onde começar.</h2>
+        <div class="filete"></div>
+        <p class="muted" style="margin-top:20px">A sensação de estar de fora de um mercado que não para de girar.</p>
+      </div>
+      <div>
+        <div class="problema-item reveal">
+          <div class="problema-num">01</div>
+          <div><h3>Parece que precisa de loja</h3><p>Ponto físico, alvará, estrutura. Parece que sem isso não dá nem pra começar.</p></div>
+        </div><div class="problema-item reveal">
+          <div class="problema-num">02</div>
+          <div><h3>R$5 mil parece longe</h3><p>Quando você não sabe por onde a primeira negociação nem começa, qualquer meta parece distante.</p></div>
+        </div><div class="problema-item reveal">
+          <div class="problema-num">03</div>
+          <div><h3>Parece que precisa de anos de experiência</h3><p>Todo mundo que fecha uma boa negociação parece que já nasceu sabendo.</p></div>
+        </div><div class="problema-item reveal">
+          <div class="problema-num">04</div>
+          <div><h3>O primeiro real ainda não apareceu</h3><p>Você já pensou em começar, mas nunca chegou a fechar a primeira negociação de verdade.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE: imagem ilustrativa de clima (nao e o Pastor; sem legenda de nome sobre a foto, por regra).
+     Trocar pela foto oficial do Pastor Evandro em alta resolucao quando a equipe enviar. -->
+<section id="autoridade">
+  <div class="wrap authority">
+    <div class="authority-foto reveal">
+      <picture>
+        <source type="image/avif" srcset="./img/v2/pastor-autoridade-460.avif 460w, ./img/v2/pastor-autoridade-700.avif 700w, ./img/v2/pastor-autoridade-933.avif 933w" sizes="(max-width: 860px) 88vw, 32vw">
+        <source type="image/webp" srcset="./img/v2/pastor-autoridade-460.webp 460w, ./img/v2/pastor-autoridade-700.webp 700w, ./img/v2/pastor-autoridade-933.webp 933w" sizes="(max-width: 860px) 88vw, 32vw">
+        <img src="./img/v2/pastor-autoridade-460.webp" alt="Pastor Evandro, fundador da UAI Veículos" class=""
+          width="933" height="1336"
+          loading="lazy" decoding="async">
+      </picture>
+      <div class="authority-legenda">
+        <div class="filete"></div>
+        <div class="nome">Pastor Evandro</div>
+        <div class="cargo">Fundador da UAI Veículos</div>
+      </div>
+    </div>
+    <div class="authority-texto reveal">
+      <span class="eyebrow">Quem vai te mostrar o caminho</span>
+      <h3>Antes da UAI Veículos, eu era só um cara com um celular atrás de negócio.</h3>
+      <ul class="timeline">
+        <li><div class="ato">Um cara comum</div><p>Comecei sem loja, sem estoque e sem um real sobrando.</p></li>
+        <li><div class="ato">A descoberta da catira</div><p>Aprendi na prática a encontrar carro com boa margem, negociar direito e revender por um preço melhor, tudo pelo WhatsApp. Hoje eu chamo isso de catira: a arte de fechar um bom negócio de carro.</p></li>
+        <li><div class="ato">A UAI Veículos</div><p>Do celular nasceu a UAI Veículos e uma audiência de milhões que acompanha cada negociação.</p></li>
+      </ul>
+      <p class="muted">Nesses 2 dias eu vou abrir esse caminho pra você, do jeito que eu queria que alguém tivesse me mostrado quando comecei.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL (PRINTS): BLOQUEADA ate a equipe fornecer prints reais (nunca fabricar depoimento). -->
+
+<section class="agenda" id="evento">
+  <picture>
+    <source type="image/avif" srcset="./img/v2/evento-640.avif 640w, ./img/v2/evento-800.avif 800w, ./img/v2/evento-1200.avif 1200w, ./img/v2/evento-1800.avif 1800w" sizes="100vw">
+    <source type="image/webp" srcset="./img/v2/evento-640.webp 640w, ./img/v2/evento-800.webp 800w, ./img/v2/evento-1200.webp 1200w, ./img/v2/evento-1800.webp 1800w" sizes="100vw">
+    <img src="./img/v2/evento-640.webp" alt="" class="agenda-img"
+      width="1897" height="829"
+      loading="lazy" decoding="async">
+  </picture>
+  <div class="agenda-shade"></div>
+  <div class="agenda-inner">
+    <div class="agenda-conteudo">
+      <h2>O que acontece nos 2 dias</h2>
+      <div class="filete"></div>
+      <p class="sub" style="margin-top:20px">Seis passos, na ordem exata em que você vai precisar deles. Do carro que você ainda não sabe onde procurar até o lucro na mão para a próxima compra.</p>
+      <div class="dias">
+        <div class="dia">
+          <span class="chip">Dia 1</span>
+          <div class="agenda-item"><div class="t">Onde achar carro sem conhecer ninguém</div><p>Os lugares onde aparece carro com margem todo dia, o que separa um anúncio comum de uma oportunidade real e como abordar o vendedor mesmo sem ter um único contato no ramo. Você sai com onde procurar e o que dizer no primeiro contato.</p></div><div class="agenda-item"><div class="t">A conta que diz se dá lucro</div><p>Como ler a FIPE, enxergar o estado real do carro e calcular a margem antes de falar qualquer valor. No fim do bloco você consegue olhar um anúncio e responder sozinho: aqui cabe a minha margem ou é furada?</p></div><div class="agenda-item"><div class="t">Checklist para não comprar problema</div><p>Procedência e documentação conferidas passo a passo, na ordem certa, antes de pagar. Na primeira catira o dinheiro é curto e não pode ficar preso num carro com pendência escondida.</p></div>
+        </div>
+        <div class="dia">
+          <span class="chip">Dia 2</span>
+          <div class="agenda-item"><div class="t">Sua primeira catira, pelo WhatsApp</div><p>Como abrir a conversa, ancorar o preço e conduzir até o fechamento sem travar, mesmo nunca tendo feito uma proposta na vida. Você sai sabendo a sequência da conversa, do primeiro contato até o fechamento.</p></div><div class="agenda-item"><div class="t">Vender rápido, sem deixar parado</div><p>Como montar o anúncio, definir o preço de venda e responder quem chama para o carro sair em dias, não em meses. Carro parado na garagem não vira o seu primeiro lucro.</p></div><div class="agenda-item"><div class="t">Girar o lucro e repetir</div><p>O que fazer com o dinheiro da primeira venda para a segunda compra já sair melhor que a primeira. É assim que uma catira isolada vira uma rotina de compra e venda.</p></div>
+        </div>
+      </div>
+      <a href="#" class="btn" data-cta="agenda" onclick="abrirModal();return false;">Quero garantir minha vaga</a>
+      <p class="escassez" style="color:var(--gold-300);font-size:14px;margin-top:14px">O auditório tem capacidade definida. A lista recebe a condição do 1º lote antes da abertura pública.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head">
+      <h2>Antes de você pensar em alguma desculpa</h2>
+      <div class="filete centro"></div>
+    </div>
+    <details class="faq-item" open>
+    <summary><span class="riscado">"Preciso ter uma loja pra começar"</span></summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Você pode começar sem loja, só com o celular na mão.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary><span class="riscado">"R$5 mil de lucro é coisa de quem já tem experiência"</span></summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>É exatamente esse o resultado que quem está começando do zero pode buscar.</span></div>
+  </details><details class="faq-item">
+    <summary><span class="riscado">"Preciso de muito dinheiro guardado"</span></summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Dá pra começar com o capital que você já tem hoje.</span></div>
+  </details><details class="faq-item">
+    <summary><span class="riscado">"Nunca trabalhei com carro na vida"</span></summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O método foi pensado pra quem está começando exatamente do zero.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>Nunca negociei carro na vida. Vou conseguir acompanhar?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O evento começa exatamente nesse ponto. O Dia 1 parte do princípio de que você não tem contato no ramo, não sabe avaliar carro e nunca fez uma proposta. Cada passo é mostrado do jeito que você faria na primeira vez, sem linguagem de quem já é do meio.</span></div>
+  </details><details class="faq-item">
+    <summary>Quanto de dinheiro eu preciso ter para fazer a primeira compra?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ninguém consegue te passar um valor fechado sem olhar o carro. O que o Dia 1 te dá é o contrário do chute: avaliar o estado real, cruzar com a FIPE e calcular a margem. Com isso na mão você escolhe a faixa de carro que cabe no que você tem hoje.</span></div>
+  </details><details class="faq-item">
+    <summary>E se o vendedor perceber que é a minha primeira vez?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quem passa segurança é quem sabe o número. Você chega na conversa com o estado do carro avaliado, a FIPE conferida e a sua margem calculada. Não é experiência que sustenta a proposta, é a conta feita antes.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>Quando e onde vai ser?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>A data e a cidade são anunciadas primeiro pra quem está na lista. É exatamente por isso que o cadastro existe.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>Quanto custa o ingresso?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O valor do ingresso e as condições chegam no seu WhatsApp assim que você entra na lista.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>Preciso ter experiência com carros pra participar?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Não. O evento foi desenhado pra quem está começando do zero, sem nenhuma experiência no ramo.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>O que acontece depois que eu me cadastro?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Você recebe no WhatsApp as informações completas: data, local e como garantir seu ingresso.</span></div>
+  </details>
+    <details class="faq-item">
+    <summary>As vagas são limitadas?</summary>
+    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Sim. O auditório tem capacidade definida, e a lista recebe a condição do 1º lote primeiro.</span></div>
+  </details>
+  </div>
+</section>
+
+<section class="cta-final" id="cta-final">
+  <picture>
+    <source type="image/avif" srcset="./img/v2/cena-hero-640.avif 640w, ./img/v2/cena-hero-800.avif 800w, ./img/v2/cena-hero-1200.avif 1200w, ./img/v2/cena-hero-1672.avif 1672w" sizes="(max-width: 900px) 100vw, 44vw">
+    <source type="image/webp" srcset="./img/v2/cena-hero-640.webp 640w, ./img/v2/cena-hero-800.webp 800w, ./img/v2/cena-hero-1200.webp 1200w, ./img/v2/cena-hero-1672.webp 1672w" sizes="(max-width: 900px) 100vw, 44vw">
+    <img src="./img/v2/cena-hero-640.webp" alt="" class="cta-final-img"
+      width="1672" height="941"
+      loading="lazy" decoding="async">
+  </picture>
+  <div class="cta-final-shade"></div>
+  <div class="cta-final-halo"></div>
+  <picture>
+    <source type="image/avif" srcset="./img/v2/pastor-cta-420.avif 420w, ./img/v2/pastor-cta-711.avif 711w" sizes="32vw">
+    <source type="image/webp" srcset="./img/v2/pastor-cta-420.webp 420w, ./img/v2/pastor-cta-711.webp 711w" sizes="32vw">
+    <img src="./img/v2/pastor-cta-420.webp" alt="" class="cta-final-pastor"
+      width="711" height="1266"
+      loading="lazy" decoding="async">
+  </picture>
+  <div class="cta-final-inner">
+    <h2>Sua próxima <em class="ouro">catira</em> começa aqui.</h2>
+    <div class="filete centro"></div>
+    <p class="sub" style="margin-top:20px">Entra na lista e recebe data, local e a condição do 1º lote no seu WhatsApp.</p>
+    <p class="escassez">A lista recebe tudo antes da abertura pública.</p>
+    <div class="form-card">
+    <div class="sheet-handle"></div>
+    
+    <h3>Garanta sua vaga na lista</h3>
+    <p class="sub">Você recebe os detalhes do evento no seu WhatsApp.</p>
+    <form class="form-lead" data-slug="N1" novalidate>
+      <input class="hp" type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field">
+        <label for="nome-final">Nome</label>
+        <input id="nome-final" type="text" name="nome" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email-final">E-mail</label>
+        <input id="email-final" type="email" name="email" placeholder="voce@email.com" inputmode="email" required autocomplete="email" spellcheck="false">
+        <div class="erro">Confere o e-mail, parece que tem algo errado.</div>
+      </div>
+      <div class="field">
+        <label for="whatsapp-final">WhatsApp</label>
+        <div class="tel-wrap">
+          <button type="button" class="pais-btn" aria-label="Selecionar país">
+            <span class="bandeira">🇧🇷</span><span class="ddi">+55</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <input id="whatsapp-final" type="tel" name="whatsapp" placeholder="(11) 91234-5678" inputmode="numeric" required autocomplete="tel">
+          <div class="pais-lista" hidden></div>
+        </div>
+        <div class="erro">Confere o número, faltou um dígito.</div>
+      </div>
+      <label class="consent"><input type="checkbox" name="consentimento" required> Aceito receber contato via WhatsApp com as informações do evento.</label>
+      <button type="submit" class="btn btn-block">Quero garantir minha vaga</button>
+      <div class="form-msg"></div>
+      <div class="microcopy" style="text-align:center">Leva 20 segundos.</div>
+    </form>
+  </div>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="modal">
+  <div class="form-card">
+    <div class="sheet-handle"></div>
+    <div class="modal-close" onclick="fecharModal()">✕</div>
+    <h3>Garanta sua vaga na lista</h3>
+    <p class="sub">Você recebe os detalhes do evento no seu WhatsApp.</p>
+    <form class="form-lead" data-slug="N1" novalidate>
+      <input class="hp" type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field">
+        <label for="nome-modal">Nome</label>
+        <input id="nome-modal" type="text" name="nome" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email-modal">E-mail</label>
+        <input id="email-modal" type="email" name="email" placeholder="voce@email.com" inputmode="email" required autocomplete="email" spellcheck="false">
+        <div class="erro">Confere o e-mail, parece que tem algo errado.</div>
+      </div>
+      <div class="field">
+        <label for="whatsapp-modal">WhatsApp</label>
+        <div class="tel-wrap">
+          <button type="button" class="pais-btn" aria-label="Selecionar país">
+            <span class="bandeira">🇧🇷</span><span class="ddi">+55</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <input id="whatsapp-modal" type="tel" name="whatsapp" placeholder="(11) 91234-5678" inputmode="numeric" required autocomplete="tel">
+          <div class="pais-lista" hidden></div>
+        </div>
+        <div class="erro">Confere o número, faltou um dígito.</div>
+      </div>
+      <label class="consent"><input type="checkbox" name="consentimento" required> Aceito receber contato via WhatsApp com as informações do evento.</label>
+      <button type="submit" class="btn btn-block">Quero garantir minha vaga</button>
+      <div class="form-msg"></div>
+      <div class="microcopy" style="text-align:center">Leva 20 segundos.</div>
+    </form>
+  </div>
+</div>
+
+<div class="sticky-cta">
+  <a href="#" class="btn btn-block" data-cta="sticky" onclick="abrirModal();return false;">Quero garantir minha vaga</a>
+</div>
+
+<footer>
+  <div class="linha1">
+    <a href="/politica-de-privacidade">Política de Privacidade</a>
+    <a href="/termos-de-uso">Termos de Uso</a>
+  </div>
+  <div class="linha2">UAI Veículos. Todos os direitos reservados.</div>
+  <div class="disclaimer">Este site não faz parte do Facebook Inc. nem é endossado pela Meta. Resultados dependem de dedicação e execução individual.</div>
+</footer>
+
+<script>
+window.NARRATIVA_SLUG = 'N1';
+</script>
+<script src="./app.js" defer></script>
+</body></html>
