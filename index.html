@@ -209,46 +209,6 @@ em.ouro{font-style:normal}
 .timeline p{font-size:15px;color:var(--muted);margin:0}
 @media (max-width:860px){.authority{grid-template-columns:1fr;gap:32px}}
 
-/* ---------- agenda: sobre a foto do evento ---------- */
-.agenda{position:relative;overflow:hidden;min-height:680px;padding:88px 0}
-.agenda-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.agenda-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,6,4,.94) 0%,rgba(8,6,4,.9) 50%,rgba(8,6,4,.84) 100%)}
-.agenda-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 20px}
-.agenda-conteudo{max-width:760px;margin:0 auto;text-align:center}
-.agenda h2{font-size:clamp(32px,4.2vw,54px)}
-.agenda .sub{font-size:17px;color:var(--muted);margin-bottom:36px}
-.dias{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:36px;text-align:left}
-.dia .chip{
-  display:inline-block;font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--gold-300);border:1px solid var(--border-strong);border-radius:999px;padding:5px 14px;margin-bottom:14px;
-}
-.agenda-item{background:rgba(10,8,6,.55);border:1px solid rgba(212,165,58,.15);border-radius:12px;padding:14px 16px;margin-bottom:10px}
-.agenda-item .t{font-weight:600;font-size:15px;margin-bottom:4px}
-.agenda-item p{font-size:13px;color:rgba(245,239,226,.75);margin:0}
-@media (max-width:900px){
-  .agenda{min-height:0;padding:0 0 56px}
-  .agenda-img{position:relative;height:40vh}
-  .agenda-shade{background:linear-gradient(0deg,#0a0806 20%,transparent 70%)}
-  .agenda-inner{margin-top:-40px}
-  .agenda-conteudo{max-width:100%}
-  .dias{grid-template-columns:1fr}
-}
-
-/* ---------- accordion objecoes+faq ---------- */
-.faq-wrap{max-width:760px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--border);padding:0}
-.faq-item summary{
-  cursor:pointer;font-weight:600;font-size:16px;list-style:none;
-  display:flex;justify-content:space-between;align-items:center;gap:16px;
-  padding:22px 0;min-height:44px;
-}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:'+';font-size:22px;color:var(--gold-500);transition:transform .2s ease;flex:none}
-.faq-item[open] summary::after{transform:rotate(45deg)}
-.faq-item .resposta{color:var(--muted);margin:0 0 20px;font-size:15px;display:flex;gap:10px}
-.faq-item .resposta svg{flex:none;width:18px;height:18px;color:var(--gold-500);margin-top:2px}
-.riscado{text-decoration:line-through;text-decoration-color:var(--gold-500);text-decoration-thickness:2px}
-
 /* ---------- cta final ---------- */
 .cta-final{position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;padding:88px 0}
 .cta-final-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center}
@@ -412,8 +372,6 @@ footer .disclaimer{font-size:11px;color:rgba(184,171,146,.75);margin-top:12px;ma
    ~7,9 mil px que o primeiro paint nao precisa calcular. */
 #problema   {content-visibility:auto;contain-intrinsic-size:auto 1135px}
 #autoridade {content-visibility:auto;contain-intrinsic-size:auto 1329px}
-#evento     {content-visibility:auto;contain-intrinsic-size:auto 1950px}
-#faq        {content-visibility:auto;contain-intrinsic-size:auto 1365px}
 
 /* Checkbox de 13px e menor que a ponta do dedo. O label ja e clicavel
    inteiro, mas o alvo visual precisa ser mirable. */
@@ -428,11 +386,9 @@ footer .linha1 a{display:inline-flex;align-items:center;min-height:44px;padding:
 @media (max-width:720px){
   /* Corpo de texto que se le de verdade sobe para 15px: 13px em tela de
      390px cansa e derruba conversao. */
-  .agenda-item p,
   .consent,
   .field label,
-  .entrega-card p,
-  .faq-item p{font-size:15px;line-height:1.55}
+  .entrega-card p{font-size:15px;line-height:1.55}
 
   .microcopy{font-size:13px}
   .authority-legenda .cargo{font-size:13px}
@@ -577,91 +533,6 @@ footer .linha1 a{display:inline-flex;align-items:center;min-height:44px;padding:
       </ul>
       <p class="muted">Nesses 2 dias eu vou abrir esse caminho pra você, do jeito que eu queria que alguém tivesse me mostrado quando comecei.</p>
     </div>
-  </div>
-</section>
-
-<!-- PROVA SOCIAL (PRINTS): BLOQUEADA ate a equipe fornecer prints reais (nunca fabricar depoimento). -->
-
-<section class="agenda" id="evento">
-  <picture>
-    <source type="image/avif" srcset="./img/v2/evento-640.avif 640w, ./img/v2/evento-800.avif 800w, ./img/v2/evento-1200.avif 1200w, ./img/v2/evento-1800.avif 1800w" sizes="100vw">
-    <source type="image/webp" srcset="./img/v2/evento-640.webp 640w, ./img/v2/evento-800.webp 800w, ./img/v2/evento-1200.webp 1200w, ./img/v2/evento-1800.webp 1800w" sizes="100vw">
-    <img src="./img/v2/evento-640.webp" alt="" class="agenda-img"
-      width="1897" height="829"
-      loading="lazy" decoding="async">
-  </picture>
-  <div class="agenda-shade"></div>
-  <div class="agenda-inner">
-    <div class="agenda-conteudo">
-      <h2>O que acontece nos 2 dias</h2>
-      <div class="filete"></div>
-      <p class="sub" style="margin-top:20px">Seis passos, na ordem exata em que você vai precisar deles. Do carro que você ainda não sabe onde procurar até o lucro na mão para a próxima compra.</p>
-      <div class="dias">
-        <div class="dia">
-          <span class="chip">Dia 1</span>
-          <div class="agenda-item"><div class="t">Onde achar carro sem conhecer ninguém</div><p>Os lugares onde aparece carro com margem todo dia, o que separa um anúncio comum de uma oportunidade real e como abordar o vendedor mesmo sem ter um único contato no ramo. Você sai com onde procurar e o que dizer no primeiro contato.</p></div><div class="agenda-item"><div class="t">A conta que diz se dá lucro</div><p>Como ler a FIPE, enxergar o estado real do carro e calcular a margem antes de falar qualquer valor. No fim do bloco você consegue olhar um anúncio e responder sozinho: aqui cabe a minha margem ou é furada?</p></div><div class="agenda-item"><div class="t">Checklist para não comprar problema</div><p>Procedência e documentação conferidas passo a passo, na ordem certa, antes de pagar. Na primeira catira o dinheiro é curto e não pode ficar preso num carro com pendência escondida.</p></div>
-        </div>
-        <div class="dia">
-          <span class="chip">Dia 2</span>
-          <div class="agenda-item"><div class="t">Sua primeira catira, pelo WhatsApp</div><p>Como abrir a conversa, ancorar o preço e conduzir até o fechamento sem travar, mesmo nunca tendo feito uma proposta na vida. Você sai sabendo a sequência da conversa, do primeiro contato até o fechamento.</p></div><div class="agenda-item"><div class="t">Vender rápido, sem deixar parado</div><p>Como montar o anúncio, definir o preço de venda e responder quem chama para o carro sair em dias, não em meses. Carro parado na garagem não vira o seu primeiro lucro.</p></div><div class="agenda-item"><div class="t">Girar o lucro e repetir</div><p>O que fazer com o dinheiro da primeira venda para a segunda compra já sair melhor que a primeira. É assim que uma catira isolada vira uma rotina de compra e venda.</p></div>
-        </div>
-      </div>
-      <a href="#" class="btn" data-cta="agenda" onclick="abrirModal();return false;">Quero garantir minha vaga</a>
-      <p class="escassez" style="color:var(--gold-300);font-size:14px;margin-top:14px">O auditório tem capacidade definida. A lista recebe a condição do 1º lote antes da abertura pública.</p>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap faq-wrap">
-    <div class="section-head">
-      <h2>Antes de você pensar em alguma desculpa</h2>
-      <div class="filete centro"></div>
-    </div>
-    <details class="faq-item" open>
-    <summary><span class="riscado">"Preciso ter uma loja pra começar"</span></summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Você pode começar sem loja, só com o celular na mão.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary><span class="riscado">"R$5 mil de lucro é coisa de quem já tem experiência"</span></summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>É exatamente esse o resultado que quem está começando do zero pode buscar.</span></div>
-  </details><details class="faq-item">
-    <summary><span class="riscado">"Preciso de muito dinheiro guardado"</span></summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Dá pra começar com o capital que você já tem hoje.</span></div>
-  </details><details class="faq-item">
-    <summary><span class="riscado">"Nunca trabalhei com carro na vida"</span></summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O método foi pensado pra quem está começando exatamente do zero.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>Nunca negociei carro na vida. Vou conseguir acompanhar?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O evento começa exatamente nesse ponto. O Dia 1 parte do princípio de que você não tem contato no ramo, não sabe avaliar carro e nunca fez uma proposta. Cada passo é mostrado do jeito que você faria na primeira vez, sem linguagem de quem já é do meio.</span></div>
-  </details><details class="faq-item">
-    <summary>Quanto de dinheiro eu preciso ter para fazer a primeira compra?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ninguém consegue te passar um valor fechado sem olhar o carro. O que o Dia 1 te dá é o contrário do chute: avaliar o estado real, cruzar com a FIPE e calcular a margem. Com isso na mão você escolhe a faixa de carro que cabe no que você tem hoje.</span></div>
-  </details><details class="faq-item">
-    <summary>E se o vendedor perceber que é a minha primeira vez?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quem passa segurança é quem sabe o número. Você chega na conversa com o estado do carro avaliado, a FIPE conferida e a sua margem calculada. Não é experiência que sustenta a proposta, é a conta feita antes.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>Quando e onde vai ser?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>A data e a cidade são anunciadas primeiro pra quem está na lista. É exatamente por isso que o cadastro existe.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>Quanto custa o ingresso?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>O valor do ingresso e as condições chegam no seu WhatsApp assim que você entra na lista.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>Preciso ter experiência com carros pra participar?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Não. O evento foi desenhado pra quem está começando do zero, sem nenhuma experiência no ramo.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>O que acontece depois que eu me cadastro?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Você recebe no WhatsApp as informações completas: data, local e como garantir seu ingresso.</span></div>
-  </details>
-    <details class="faq-item">
-    <summary>As vagas são limitadas?</summary>
-    <div class="resposta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Sim. O auditório tem capacidade definida, e a lista recebe a condição do 1º lote primeiro.</span></div>
-  </details>
   </div>
 </section>
 
